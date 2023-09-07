@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085DE8FC2A959CF30093BF63 /* MemoryGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DE8FB2A959CF30093BF63 /* MemoryGameModel.swift */; };
+		085DE8FE2A95A0B80093BF63 /* MemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085DE8FD2A95A0B80093BF63 /* MemoryGameViewModel.swift */; };
 		0873B8072A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0873B8062A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift */; };
 		0873B8092A8F041B00FFD3FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0873B8082A8F041B00FFD3FE /* ContentView.swift */; };
 		0873B80B2A8F041C00FFD3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0873B80A2A8F041C00FFD3FE /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		085DE8FB2A959CF30093BF63 /* MemoryGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameModel.swift; sourceTree = "<group>"; };
+		085DE8FD2A95A0B80093BF63 /* MemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameViewModel.swift; sourceTree = "<group>"; };
 		0873B8032A8F041B00FFD3FE /* Peek-a-Pair Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Peek-a-Pair Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0873B8062A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peek_a_Pair_ProApp.swift; sourceTree = "<group>"; };
 		0873B8082A8F041B00FFD3FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				0873B8062A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift */,
+				085DE8FB2A959CF30093BF63 /* MemoryGameModel.swift */,
+				085DE8FD2A95A0B80093BF63 /* MemoryGameViewModel.swift */,
 				0873B8082A8F041B00FFD3FE /* ContentView.swift */,
 				0873B80A2A8F041C00FFD3FE /* Assets.xcassets */,
 				0873B80C2A8F041C00FFD3FE /* Preview Content */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085DE8FC2A959CF30093BF63 /* MemoryGameModel.swift in Sources */,
 				0873B8092A8F041B00FFD3FE /* ContentView.swift in Sources */,
 				0873B8072A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift in Sources */,
+				085DE8FE2A95A0B80093BF63 /* MemoryGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

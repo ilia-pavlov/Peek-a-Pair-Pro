@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Peek_a_Pair_ProApp: App {
+    /// free init from class allows to initialize with empty brakes
+    /// `game` are pointer to `MemoryGameViewModel()`
+    let game: MemoryGameViewModel = .init()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: game)
         }
     }
 }
