@@ -28,6 +28,7 @@ class MemoryGameViewModel: ObservableObject {
     
     // MARK: - Intent(s)
     func choose(_ card: MemoryGameModel<String>.Card) {
+        /// objectWillChange.send() - invisible object works under the sense since since we added @Published
         model.choose(card)
     }
 }
