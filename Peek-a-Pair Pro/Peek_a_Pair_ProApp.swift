@@ -11,11 +11,11 @@ import SwiftUI
 struct Peek_a_Pair_ProApp: App {
     /// free init from class allows to initialize with empty brakes
     /// `game` are pointer to `MemoryGameViewModel()`
-    let game: MemoryGameViewModel = .init()
+    private let game: MemoryGameViewModel = .init()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: game)
+            EmojiMemoryGameView(gameViewModel: game)
         }
     }
 }
