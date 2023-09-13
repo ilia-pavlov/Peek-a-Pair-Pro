@@ -19,7 +19,9 @@ class MemoryGameViewModel: ObservableObject {
                   "🛻", "🚟", "🚠", "🚝", "🚄"]
     
     private static func createMemoryGame() -> MemoryGameModel<String> {
-        .init(numberOfPairsOfCards: 5) { pairIndex in emojis[pairIndex] }
+        .init(numberOfPairsOfCards: 6) { pairIndex in
+            emojis[pairIndex]
+        }
     }
     
     /// `private`- protect model to be reachable from View

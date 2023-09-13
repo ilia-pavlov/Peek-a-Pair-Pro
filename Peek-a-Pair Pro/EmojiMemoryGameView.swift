@@ -11,19 +11,18 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var gameViewModel: MemoryGameViewModel
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                /// ForEach should be conform to `Identifiable`
-                ForEach(gameViewModel.cards) { card in
-                    CardView(card)
-                        .aspectRatio(2/3, contentMode: .fit)
-                        .onTapGesture {
-                            gameViewModel.choose(card)
-                        }
+        AspectVGrid(items: gameViewModel.cards, aspectRatio: 2/3) { card in
+            if card.isMatched && !card.isFaceUp {
+                Rectangle().opacity(0)
+            } else {
+                CardView(card)
+                    .padding(4)
+                    .onTapGesture {
+                        gameViewModel.choose(card)
                 }
             }
         }
-        .foregroundColor(/*@START_MENU_TOKEN@*/.red/*@END_MENU_TOKEN@*/)
+        .foregroundColor(.red)
         .padding(.horizontal)
     }
 }
@@ -57,9 +56,9 @@ struct CardView: View {
     }
     
     private struct DrawingConstants {
-        static let cornerRadius: CGFloat = 20
+        static let cornerRadius: CGFloat = 10
         static let lineWidth: CGFloat = 3
-        static let fontScale: CGFloat = 0.8
+        static let fontScale: CGFloat = 0.75
     }
 }
 
