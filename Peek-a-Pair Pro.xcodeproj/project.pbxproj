@@ -14,6 +14,7 @@
 		0873B80B2A8F041C00FFD3FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0873B80A2A8F041C00FFD3FE /* Assets.xcassets */; };
 		0873B80E2A8F041C00FFD3FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0873B80D2A8F041C00FFD3FE /* Preview Assets.xcassets */; };
 		08AAF6202AB14DE60038D6A7 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AAF61F2AB14DE60038D6A7 /* AspectVGrid.swift */; };
+		08AAF6222AB295EF0038D6A7 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AAF6212AB295EF0038D6A7 /* Pie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0873B80A2A8F041C00FFD3FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0873B80D2A8F041C00FFD3FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		08AAF61F2AB14DE60038D6A7 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		08AAF6212AB295EF0038D6A7 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				085DE8FD2A95A0B80093BF63 /* MemoryGameViewModel.swift */,
 				0873B8082A8F041B00FFD3FE /* EmojiMemoryGameView.swift */,
 				08AAF61F2AB14DE60038D6A7 /* AspectVGrid.swift */,
+				08AAF6212AB295EF0038D6A7 /* Pie.swift */,
 				0873B80A2A8F041C00FFD3FE /* Assets.xcassets */,
 				0873B80C2A8F041C00FFD3FE /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08AAF6222AB295EF0038D6A7 /* Pie.swift in Sources */,
 				085DE8FC2A959CF30093BF63 /* MemoryGameModel.swift in Sources */,
 				0873B8092A8F041B00FFD3FE /* EmojiMemoryGameView.swift in Sources */,
 				0873B8072A8F041B00FFD3FE /* Peek_a_Pair_ProApp.swift in Sources */,
