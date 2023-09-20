@@ -35,4 +35,8 @@ class MemoryGameViewModel: ObservableObject {
         /// objectWillChange.send() - invisible object works under the sense since since we added @Published
         model.choose(card)
     }
+    
+    func shuffle() {
+        model.shuffle()
+    }
 }

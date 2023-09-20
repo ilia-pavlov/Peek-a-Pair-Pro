@@ -11,19 +11,40 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var gameViewModel: MemoryGameViewModel
     
     var body: some View {
+        VStack {
+            gameBody
+            shuffle
+        }
+        .padding()
+    }
+    
+    var gameBody: some View {
         AspectVGrid(items: gameViewModel.cards, aspectRatio: 2/3) { card in
             if card.isMatched && !card.isFaceUp {
-                Rectangle().opacity(0)
+//              VS do Rectangle().opacity(0) we can use Color.clear
+                Color.clear
             } else {
                 CardView(card)
                     .padding(4)
                     .onTapGesture {
-                        gameViewModel.choose(card)
+                        withAnimation(.easeInOut(duration: 3)) {
+                            gameViewModel.choose(card)
+                        }
                 }
             }
         }
         .foregroundColor(.red)
-        .padding(.horizontal)
+    }
+    
+    var shuffle: some View {
+//        CustomButton(buttonName: "Shuffle", buttonImage: "shuffle") {
+//            gameViewModel.shuffle()
+//        }
+        Button("Shuffle") {
+            withAnimation {
+                gameViewModel.shuffle()
+            }
+        }
     }
 }
 
@@ -43,7 +64,6 @@ struct CardView: View {
                 Text(card.content)
                     .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
                     .animation(Animation.linear(duration: 1.5).repeatForever(autoreverses: false))
-//                    .font(font(in: geometry.size)) - font func is not animatable
                     .font(Font.system(size: DrawingConstants.fontSize))
                     .scaleEffect(scale(thatFits: geometry.size))
             }
@@ -54,11 +74,6 @@ struct CardView: View {
     private func scale(thatFits size: CGSize) -> CGFloat {
         min(size.width, size.height) / (DrawingConstants.fontSize / DrawingConstants.fontScale)
     }
-    
-//    font func is not animatable
-//    private func font(in size: CGSize) -> Font {
-//        Font.system(size: min(size.width, size.height) * DrawingConstants.fontScale)
-//    }
     
     private struct DrawingConstants {
         static let fontScale: CGFloat = 0.65

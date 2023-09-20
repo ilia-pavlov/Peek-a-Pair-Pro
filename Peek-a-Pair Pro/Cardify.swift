@@ -16,15 +16,13 @@ struct Cardify: ViewModifier {
             if isFaceUp {
                 shape.foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                 shape.strokeBorder(lineWidth: DrawingConstants.lineWidth)
-//                content
             } else {
                 shape
             }
-            // to animate both card we need have `context` for implicit animation
-            // on screen so we do a trick with .opacity where 0 is invisible
             content
                 .opacity(isFaceUp ? 1 : 0)
         }
+        .rotation3DEffect(Angle.degrees(isFaceUp ? 0 : 180), axis: (0, 1, 0))
     }
     
     private struct DrawingConstants {
